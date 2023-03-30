@@ -1,3 +1,5 @@
+/* Page Header GRID ---------------------------*/
+
 .container {
   display: grid;
   grid-template-rows: repeat(11, 60px);
@@ -22,6 +24,76 @@
   z-index: -1;
 }
 
+.p1 {
+  grid-area: 9 / 6 / 11 / 7;
+  z-index: 2;
+}
+
+.p2 {
+  grid-area: 9 / 6 / 11 / 7;
+  z-index: 2;
+}
+
+.p3 {
+  grid-area: 9 / 6 / 11 / 7;
+  z-index: 2;
+}
+
+.p4 {
+  grid-area: 9 / 6 / 11 / 7;
+  z-index: 2;
+}
+
+.p5 {
+  grid-area: 9 / 6 / 11 / 7;
+  z-index: 2;
+}
+
+.p6 {
+  grid-area: 9 / 6 / 11 / 7;
+  z-index: 2;
+}
+
+.p7 {
+  grid-area: 9 / 6 / 11 / 7;
+  z-index: 2;
+}
+
+.p8 {
+  grid-area: 9 / 6 / 11 / 7;
+  z-index: 2;
+}
+
+.p9 {
+  grid-area: 9 / 6 / 11 / 7;
+  z-index: 2;
+}
+
+.p0 {
+  grid-area: 9 / 6 / 11 / 7;
+  z-index: 2;
+}
+
+.pline {
+  grid-area: 9 / 6 / 11 / 7;
+  z-index: 2;
+}
+
+
+/* Page Navigation ----------------------------*/
+
+#facts {
+  position: absolute;
+  bottom: -19.5%;
+}
+
+
+/* Border Class to quickly get an overview ----*/
+
 /* .border {
   border: 1px solid blue;
+}
+
+.border2 {
+  border: 10px solid blue;
 } */

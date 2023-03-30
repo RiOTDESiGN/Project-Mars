@@ -17,20 +17,20 @@
 }
 
 @font-face {
-font-family: SpaceAge;
-src: url(space-age.ttf);
+  font-family: SpaceAge;
+  src: url(space-age.ttf);
 }
 
-html { 
+html {
   scroll-behavior: smooth;
-}  
+}
 
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   word-spacing: 1.4px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 17px;
   color: var(--text);
   background-color: var(--background);
@@ -56,15 +56,38 @@ body {
 }
 
 a {
-  color: #fff;
-  text-decoration: none;
-  text-underline-offset: 10px;
+  background-image: linear-gradient(
+    to right,
+    brown,
+    brown 50%,
+    white 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.5s ease-in-out;
+}
+
+a:before{
+  content: '';
+  background: brown;
+  display: block;
+  position: relative;
+  bottom: -30px;
+  left: -4px;
+  width: 0;
+  height: 3px;
+  transition: all 0.5s ease-in-out;
 }
 
 a:hover {
-  color: brown;
-  text-decoration-line: underline;
-  font-weight: 900;
+ background-position: 0;
+ font-weight: 900;
+}
+
+a:hover::before{
+  width: 100%;
 }
 
 h1 {
@@ -95,7 +118,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: SpaceAge,'Courier New', Courier, monospace;
+  font-family: SpaceAge, "Courier New", Courier, monospace;
   font-size: 100px;
   text-shadow: 5px 5px black;
 }
@@ -104,11 +127,12 @@ li {
   text-decoration: none;
   font-family: SpaceAge;
   font-size: 20px;
+  text-shadow: none;
   margin-right: 12px;
 }
 
 .item {
-  background-color:rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .item-2 {
@@ -141,7 +165,7 @@ li {
   text-shadow: 0px 0px 7px #000;
 }
 
-.item-4 {
+/* .item-4 {
   position: relative;
   overflow: visible;
 }
@@ -157,13 +181,32 @@ li {
   background: url(solarsystem.jpg) 0 0 no-repeat;
   background-size: 100%;
   transform: rotate(180deg);
+  border: 3px solid red;
+} */
+
+.item-4 {
+  position: relative;
+  overflow: visible;
+}
+
+.item-4::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 300px;
+  bottom: -26%;
+  left: 43.8%;
+  z-index: -1;
+  background: url(solarsystem.jpg) 0 0 no-repeat;
+  background-size: 100%;
+  transform: rotate(180deg);
 }
 
 .item-5 {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-color:black;
+  background-color: black;
   border-radius: 25px;
   border: 8px solid brown;
   width: 1000px;
@@ -188,7 +231,192 @@ li {
 
 .rover {
   width: 200px;
+}
+
+.boxrocket{
+  height: 208px;
   position: relative;
+  overflow: hidden;
   left: -37%;
-  top: -100%;
+  top: -264%;
+}
+
+.fade-in {
+  animation: rocket-fadein ease-in-out 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  animation-duration: 2s;
+  animation-delay: 1s;
+}
+@keyframes rocket-fadein {
+  0% {
+      transform: translateY(100%);
+  }
+  100% {
+      transform: translateY(0%);
+   }
+}
+
+.test {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.p1 {
+  margin-top: 100px;
+  margin-left: -7px;
+  width: 10px;
+  height: 10px;
+  border: 0;
+  border-radius: 100%;
+}
+
+.p2 {
+  margin-top: 92px;
+  margin-left: 9px;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 100%;
+}
+
+.p3 {
+  margin-top: 95px;
+  margin-left: 45px;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  border-radius: 100%;
+}
+
+.p4 {
+  margin-top: 82px;
+  margin-left: 93px;
+  width: 54px;
+  height: 54px;
+  border: 0;
+  border-radius: 100%;
+}
+
+.p5 {
+  margin-top: 76px;
+  margin-left: 168px;
+  width: 70px;
+  height: 70px;
+  border: 0;
+  border-radius: 100%;
+}
+
+.p6 {
+  margin-top: 103px;
+  margin-left: 243px;
+  width: 14px;
+  height: 14px;
+  border: 0;
+  border-radius: 100%;
+}
+
+.p7 {
+  margin-top: 99px;
+  margin-left: 262px;
+  width: 26px;
+  height: 26px;
+  border: 0;
+  border-radius: 100%;
+}
+
+.p8 {
+  margin-top: 98px;
+  margin-left: 296px;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 100%;
+}
+
+.p9 {
+  margin-top: 108px;
+  margin-left: 332px;
+  width: 10px;
+  height: 10px;
+  border: 0;
+  border-radius: 100%;
+}
+
+.p0 {
+  margin-top: 38px;
+  margin-left: 355px;
+  width: 150px;
+  height: 150px;
+  border: 0;
+  border-radius: 100%;
+}
+
+.pline {
+  background-color: brown;
+  margin-top: -3px;
+  margin-left: 249px;
+  width: 2px;
+  height: 86px;
+}
+
+.pline::after {
+  content: "";
+  position: relative;
+  top: 102%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: brown transparent transparent transparent;
+}
+
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: brown;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 3px 3px 6px black;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  width: 120px;
+  bottom: calc(100% + 7px);
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: brown transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip .tooltiptext {
+  opacity: 0;
+  transition: opacity ease-in 0.5s;
 }
