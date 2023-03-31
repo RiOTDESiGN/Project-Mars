@@ -56,12 +56,7 @@ body {
 }
 
 a {
-  background-image: linear-gradient(
-    to right,
-    brown,
-    brown 50%,
-    white 50%
-  );
+  background-image: linear-gradient(to right, brown, brown 50%, white 50%);
   background-size: 200% 100%;
   background-position: -100%;
   -webkit-background-clip: text;
@@ -69,8 +64,8 @@ a {
   transition: all 0.5s ease-in-out;
 }
 
-a:before{
-  content: '';
+a:before {
+  content: "";
   background: brown;
   display: block;
   position: relative;
@@ -82,11 +77,11 @@ a:before{
 }
 
 a:hover {
- background-position: 0;
- font-weight: 900;
+  background-position: 0;
+  font-weight: 900;
 }
 
-a:hover::before{
+a:hover::before {
   width: 100%;
 }
 
@@ -268,7 +263,7 @@ li {
   width: 200px;
 }
 
-.boxrocket{
+.boxrocket {
   height: 208px;
   position: relative;
   overflow: hidden;
@@ -285,11 +280,11 @@ li {
 }
 @keyframes rocket-fadein {
   0% {
-      transform: translateY(100%);
+    transform: translateY(100%);
   }
   100% {
-      transform: translateY(0%);
-   }
+    transform: translateY(0%);
+  }
 }
 
 .test {
@@ -407,7 +402,6 @@ li {
   border-color: brown transparent transparent transparent;
 }
 
-
 /* Tooltip container */
 .tooltip {
   position: relative;
@@ -424,7 +418,7 @@ li {
   border-radius: 10px;
   border: 1px solid black;
   box-shadow: 3px 3px 6px black;
- 
+
   /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
@@ -456,10 +450,8 @@ li {
   transition: opacity ease-in 0.5s;
 }
 
-
-
 /* JAYA_K Code ------------------------------------------------- */
-
+/*----------------***** section2 *****---------------------------*/
 .containerJAYA {
   position: relative;
   display: flex;
@@ -469,7 +461,7 @@ li {
   min-height: 1000px;
   margin: 0 auto;
   align-items: center;
-  background-color: rgb(42, 41, 41);
+  background-color: rgb(16, 16, 16);
 }
 
 .img1JAYA {
@@ -477,32 +469,30 @@ li {
   top: 100px;
   left: 100px;
   z-index: 1;
-  box-shadow: -60px -60px 15px rgb(214, 175, 141), 2px 2px 15px rgb(9, 9, 9);
+  box-shadow: -60px -60px 30px rgb(201, 75, 75), 2px 2px 15px rgb(9, 9, 9);
 }
 .img2JAYA {
   position: absolute;
   left: 200px;
   top: 300px;
-  box-shadow: 60px 60px 15px rgb(214, 175, 141);
+  box-shadow: 60px 60px 30px rgb(201, 75, 75);
 }
 .infoJAYA {
   padding: 0 50px;
   text-align: center;
   width: 30%;
-  
+
   color: aliceblue;
- 
 }
-
-
+/* -----------------**** section3 *****--------------------*/
 .containerJAYA2 {
   display: grid;
   grid-template-rows: 100px 3fr 3fr 3fr;
 
   grid-template-columns: 3fr 3fr 3fr;
 
-  background-color: rgb(240, 222, 206);
-  border: 1px solid rgb(204, 155, 112);
+  background-color: rgb(16, 16, 16);
+  border: 1px solid rgb(218, 175, 137);
   justify-content: center;
   margin-right: auto;
   margin-left: auto;
@@ -528,5 +518,45 @@ li {
 .numJAYA2 {
   /*border: 1px solid rgb(204, 155, 112);*/
   border-radius: 50%;
-  background-color: rgb(204, 155, 112);
+  background-color: brown;
+}
+/*  ------------ ***** section4 *****-----------*/
+.sec4imgcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1500px;
+  min-width: 400px;
+  gap: 20px 20px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.sec4img-wrap {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+.sec4img-cls {
+  display: block;
+  width: 400px;
+  height: 300px;
+}
+.sec4img-des {
+  position: absolute;
+  inset: 0;
+  /*background: rgba(6, 6, 6, 0.72);*/
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: 0.5s, linear;
+}
+.sec4img-wrap:hover .sec4img-des {
+  opacity: 1;
+  background-color: rgb(16, 16, 16);
+}
+.sec4text {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding: 30px;
 }
