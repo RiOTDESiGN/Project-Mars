@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>MARS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARS - The Red Planet</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="grid.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><h4></h4></button>
     <div class="container">
       <div class="item item-1 border header">
         mArS
 
         <div class="menu border">
           <ul>
-            <li><a href="#history">History</a></li>
-            <li><a href="#facts">Facts</a></li>
-            <li><a href="#images">Images</a></li>
+            <li><a href="#history">history</a></li>
+            <li><a href="#facts">facts</a></li>
+            <li><a href="#missions">missions</a></li>
           </ul>
         </div>
       </div>
@@ -31,49 +35,38 @@
       </div>
       <div class="item item-4 border2">
         <div id="history" class="border"></div>
+        <div id="facts" class="border"></div>
+        <div id="missions" class="border"></div>
       </div>
-
       <div class="p1 border tooltip"><span class="tooltiptext">Pluto</span></div>
-
       <div class="p2 border tooltip"><span class="tooltiptext">Neptune</span></div>
-
       <div class="p3 border tooltip"><span class="tooltiptext">Uranus</span></div>
-
       <div class="p4 border tooltip"><span class="tooltiptext">Saturn</span></div>
-
       <div class="p5 border tooltip"><span class="tooltiptext">Jupiter</span></div>
-
       <div class="p6 border"></div>
-
       <div class="p7 border tooltip"><span class="tooltiptext">Earth</span></div>
-
       <div class="p8 border tooltip"><span class="tooltiptext">Venus</span></div>
-
       <div class="p9 border tooltip"><span class="tooltiptext">Mercury</span></div>
-
       <div class="p0 border tooltip"><span class="tooltiptext">The Sun</span></div>
-
       <div class="pline border"></div>
-
     </div>
-    <div class="item-5 border"><div class="boxrocket border"><img src="rocket.png" alt="Mars Rover" class="rover fade-in border"></div>mars history</div>
+    <div class="item-5 border"><div class="boxrocket border"><img src="rocket.png" alt="Mars Rocket" class="rocket fade-in border"></div>mars history</div>
     <div class="item-6 border">
-
       <div class="containerJAYA">
         <div class="imgconatiner">
           <img
             class="img1JAYA"
             src="pexels-pixabay-73910.webp"
             alt=""
-            width="400"
-            height="450"
+            width="300"
+            height="240"
           />
           <img
             class="img2JAYA"
             src="photo by curiosity rover .webp"
             alt=""
-            width="400"
-            height="450"
+            width="300"
+            height="240"
           />
         </div>
         <div class="infoJAYA">
@@ -83,14 +76,14 @@
             NASA currently has two rovers (Curiosity and Perseverance), one lander
             (InSight), and one helicopter (Ingenuity) exploring the surface of
             Mars.
-            
+          </p><br>
             <p>
             Perseverance rover the largest, most advanced rover NASA has
             sent to another world touched down on Mars on Feb. 18, 2021, after a
             203-day journey traversing 293 million miles (472 million kilometers).
             The Ingenuity helicopter rode to Mars attached to the belly of
             Perseverance.
-          </p>
+          </p><br>
           <p> Perseverance is one of three spacecraft that arrived at
             Mars in 2021. The Hope orbiter from the United Arab Emirates arrived
             on Feb. 9, 2021. Chinas Tianwen-1 mission arrived on Feb. 10, 2021,
@@ -103,21 +96,18 @@
             studying the Red Planet from above including three NASA orbiters: 2001
             Mars Odyssey, Mars Reconnaissance Orbiter, and MAVEN.
           </p>-->
-          </p>
         </div>
       </div>
-
     </div>
 
-    <div class="item-7 border"><div id="facts" class="border"></div>mars facts</div>
-    <div class="item-8 border">
-      
+    <div class="item-7 border">mars facts<div class="boxbook border"><img src="book.png" alt="Mars Book" class="book border"></div></div>
+    <div class="item-8 border">  
     <!-- class names used for container for main div , item for subdivs, item1 for heading, num for to style the numbers-->
     <div class="containerJAYA2">
-      <div class="item1JAYA2">Things to know about mars</div>
+      <div class="item1JAYA2"></div>
       <div class="itemJAYA2">
         <p class="numJAYA2">1</p>
-        <h3>SMALL PlANET</h3>
+        <h3>SMALL PLANET</h3>
         <p>
           If the Sun were as tall as a typical front door, Earth would be the
           size of a dime, and Mars would be about as big as an aspirin tablet.
@@ -160,7 +150,7 @@
       <div class="itemJAYA2">
         <p class="numJAYA2">6</p>
         <h3>TWO MOONS</h3>
-        <p>Mars has two moons named Phobos and Deimos.</p>
+        <p>Mars has two moons named Phobos and Deimos. They are irregular in shape, and small compared to Earth's moon.</p>
       </div>
       <div class="itemJAYA2">
         <p class="numJAYA2">7</p>
@@ -188,115 +178,121 @@
         </p>
       </div>
     </div>
-
     </div>
 
-    <div class="item-7 border"><div id="facts" class="border"></div>mars MISSIONS</div>
-    <div class="item-8 border">
+    <div class="item-9 border"><div class="boxrover border"><img src="satellite.png" alt="Mars Rover" class="rover border"></div>mars missions</div>
+    <div class="item-10 border">
 <!-- In section4 iam using classnames as sec4imgconatiner , sec4img-wrap , sec4img-cls , sed4img-des , sec4text-->
 <div class="sec4imgcontainer">
   <!--image1-->
   <div class="sec4img-wrap">
     <img
       class="sec4img-cls"
-      src="../Project-Mars/curiosity rover.jpg"
+      src="curiosity rover.jpg"
       alt="curiosity rover"
     />
-    <h2>curiosity rover</h2>
 
     <div class="sec4img-des">
-      <p class="sec4text">
+      <div class="sec4text">
+        <h2>Curiosity Rover</h2>
         Curiosity is the largest and most capable rover ever sent to Mars.
         It launched November 26, 2011 and landed on Mars at 10:32 p.m. PDT
         on Aug. 5, 2012 (1:32 a.m. EDT on Aug. 6, 2012).
-      </p>
+      </div>
     </div>
   </div>
   <!--image2-->
   <div class="sec4img-wrap">
-    <img class="sec4img-cls" src="../Project-Mars/maven.jpg" alt="Maven" />
-    <h2>Maven</h2>
+    <img class="sec4img-cls" src="maven.jpg" alt="Maven" />
 
     <div class="sec4img-des">
-      <p class="sec4text">
+      <div class="sec4text">
+        <h2>Maven</h2>
         MAVEN is obtaining critical measurements of the Martian atmosphere
         to help understand dramatic climate change on the red planet over
         its history.
-      </p>
+      </div>
     </div>
   </div>
   <!--image3-->
   <div class="sec4img-wrap">
     <img
       class="sec4img-cls"
-      src="../Project-Mars/preservarancerover.jpg"
+      src="preservarancerover.jpg"
       alt="preservarancerover"
     />
-    <h2>preservarancerover</h2>
 
     <div class="sec4img-des">
-      <p class="sec4text">
+      <div class="sec4text">
+        <h2>Preservarance Rover</h2>
         The mission also provides opportunities to gather knowledge and
         demonstrate technologies that address the challenges of future human
         expeditions to Mars
-      </p>
+      </div>
     </div>
   </div>
   <!--image4-->
   <div class="sec4img-wrap">
     <img
       class="sec4img-cls"
-      src="../Project-Mars/exomars-2016-tgo.jpg"
+      src="exomars-2016-tgo.jpg"
       alt="Exo Mars"
     />
-    <h2>Exo Mars</h2>
 
     <div class="sec4img-des">
-      <p class="sec4text">
+      <div class="sec4text">
+        <h2>ExoMars</h2>
         The first mission in the ExoMars program is called the Trace Gas
         Orbiter (TGO), undertaken in partnership between ESA and Russia's
         Federal Space Agency, Roscosmos. ESA's Trace Gas Orbiter studies the
         Martian atmosphere for the presence of methane and other gases that
         may be present in small concentrations
-      </p>
+      </div>
     </div>
   </div>
   <!--image5-->
   <div class="sec4img-wrap">
     <img
       class="sec4img-cls"
-      src="../Project-Mars/Mars Reconnaissance Orbiter.jpg"
+      src="Mars Reconnaissance Orbiter.jpg"
       alt="Reconnaissance Orbiter"
     />
-    <h2>Reconnaissance Orbiter</h2>
 
     <div class="sec4img-des">
-      <p class="sec4text">
+      <div class="sec4text">
+        <h2>Reconnaissance Orbiter</h2>
         NASA's Mars Reconnaissance Orbiter, launched in August, 2005,
         carries the most powerful camera ever flown on a planetary
         exploration mission for homing in on details of Martian terrain with
         extraordinary clarity.
-      </p>
+      </div>
     </div>
   </div>
   <!--image6-->
   <div class="sec4img-wrap">
     <img
       class="sec4img-cls"
-      src="../Project-Mars/mars-odyssey.jpg"
+      src="mars-odyssey.jpg"
       alt="Mars odyssey"
     />
-    <h2>Mars odyssey</h2>
 
     <div class="sec4img-des">
-      <p class="sec4text">
+      <div class="sec4text">
+        <h2>Mars Odyssey</h2>
         The 2001 Mars Odyssey mission is NASA's longest-lasting spacecraft
         at Mars.
-      </p>
+      </div>
     </div>
   </div>
 </div>
     </div>
+    <footer>
+      <div class="threes"><a href="https://mars.nasa.gov/" target="_blank">Visit Nasa</a></div>
+      <div class="threes"><a href="https://solarsystem.nasa.gov/planets/mars/overview/" target="_blank">Mars information from Nasa</a></div>
+      <div class="threes"><a href="#top">To the top</a></div>
+    </footer>
+
+
 
   </body>
 </html>

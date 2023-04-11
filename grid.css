@@ -87,6 +87,15 @@
   bottom: -19.5%;
 }
 
+#facts {
+  position: absolute;
+  bottom: -402.8%;
+}
+
+#missions {
+  position: absolute;
+  bottom: -719.4%;
+}
 
 /* Border Class to quickly get an overview ----*/
 

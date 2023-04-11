@@ -1,5 +1,7 @@
+/* ---------------------------------------- ROOT ELEMENTS */
 :root {
   --text: #fff;
+  --color: brown;
   --background: #000;
 }
 
@@ -9,11 +11,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-@font-face {
-  font-family: Aulian;
-  src: url(aulian.ttf);
 }
 
 @font-face {
@@ -35,38 +32,40 @@ body {
   color: var(--text);
   background-color: var(--background);
   overflow-x: hidden;
-  /* border: 1px solid blue; */
 }
 
-/* width */
+/* -------------------------------------------- SCROLLBAR */
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 4px;
 }
-
-/* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px rgb(0, 0, 0);
-  background-color: #000;
+  background-color: var(--background);
 }
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: brown;
-  border-radius: 100%;
+  background: var(--color);
+  border-radius: 5px;
 }
 
+
+/* ------------------------------------------------- LINK */
 a {
-  background-image: linear-gradient(to right, brown, brown 50%, white 50%);
+  background-image: linear-gradient(
+    to right,
+    var(--color),
+    var(--color) 50%,
+    var(--text) 50%
+  );
   background-size: 200% 100%;
   background-position: -100%;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.5s ease-in-out;
 }
 
-a:before {
-  content: "";
-  background: brown;
+a:before{
+  content: '';
+  background: var(--color);
   display: block;
   position: relative;
   bottom: -30px;
@@ -77,16 +76,30 @@ a:before {
 }
 
 a:hover {
-  background-position: 0;
-  font-weight: 900;
+ background-position: 0;
+ font-weight: 900;
 }
 
-a:hover::before {
+a:hover::before{
   width: 100%;
 }
 
+
+/* ------------------------------------ STANDARD ELEMENTS */
 h1 {
   margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin: 20px 0 6px 0;
+}
+
+h4:after {
+  content: ' \21E1';
 }
 
 p {
@@ -95,15 +108,17 @@ p {
 
 ul {
   display: flex;
+  gap: 36px;
 }
 
 li {
   display: inherit;
-  margin-right: 30px;
   margin-top: 48px;
   letter-spacing: 6px;
 }
 
+
+/* ----------------------------------------------- LAYOUT */
 .container {
   width: 1000px;
   margin: 0 auto;
@@ -115,7 +130,7 @@ li {
   justify-content: space-between;
   font-family: SpaceAge, "Courier New", Courier, monospace;
   font-size: 100px;
-  text-shadow: 5px 5px black;
+  text-shadow: 5px 5px #000;
 }
 
 .menu {
@@ -123,7 +138,7 @@ li {
   font-family: SpaceAge;
   font-size: 20px;
   text-shadow: none;
-  margin-right: -14px;
+  margin-right: -7px;
 }
 
 .item {
@@ -153,31 +168,12 @@ li {
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: brown;
+  background-color: var(--color);
   border-radius: 50px;
-  border: 10px double black;
+  border: 10px double var(--background);
   padding: 0 40px;
   text-shadow: 0px 0px 7px #000;
 }
-
-/* .item-4 {
-  position: relative;
-  overflow: visible;
-}
-
-.item-4::before {
-  content: "";
-  position: absolute;
-  width: 700px;
-  height: 500px;
-  bottom: 2%;
-  left: 43.6%;
-  z-index: -1;
-  background: url(solarsystem.jpg) 0 0 no-repeat;
-  background-size: 100%;
-  transform: rotate(180deg);
-  border: 3px solid red;
-} */
 
 .item-4 {
   position: relative;
@@ -201,9 +197,9 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: black;
+  background-color: var(--background);
   border-radius: 25px;
-  border: 8px solid brown;
+  border: 8px solid var(--color);
   width: 1000px;
   height: 50px;
   margin-top: 50px;
@@ -219,8 +215,8 @@ li {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  background-color: brown;
-  border: 10px double black;
+  background-color: var(--color);
+  border: 10px double var(--background);
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   width: 960px;
@@ -231,10 +227,10 @@ li {
 .item-7 {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  background-color: black;
+  justify-content: space-between;
+  background-color: var(--background);
   border-radius: 25px;
-  border: 8px solid brown;
+  border: 8px solid var(--color);
   width: 1000px;
   height: 50px;
   margin-top: 50px;
@@ -248,10 +244,10 @@ li {
 
 .item-8 {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: center;
-  background-color: brown;
-  border: 10px double black;
+  background-color: var(--color);
+  border: 10px double var(--background);
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   width: 960px;
@@ -259,11 +255,42 @@ li {
   overflow-y: hidden;
 }
 
-.rover {
+.item-9 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--background);
+  border-radius: 25px;
+  border: 8px solid var(--color);
+  width: 1000px;
+  height: 50px;
+  margin-top: 50px;
+  padding-bottom: 7px;
+  padding-right: 7px;
+  font-family: SpaceAge;
+  font-size: 50px;
+  overflow-y: visible;
+  z-index: 1;
+}
+
+.item-10 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: var(--color);
+  border: 10px double var(--background);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  width: 960px;
+  height: auto;
+  overflow-y: hidden;
+}
+
+.rocket {
   width: 200px;
 }
 
-.boxrocket {
+.boxrocket{
   height: 208px;
   position: relative;
   overflow: hidden;
@@ -280,17 +307,36 @@ li {
 }
 @keyframes rocket-fadein {
   0% {
-    transform: translateY(100%);
+      transform: translateY(100%);
   }
   100% {
-    transform: translateY(0%);
-  }
+      transform: translateY(0%);
+   }
 }
 
-.test {
-  display: flex;
-  justify-content: end;
-  align-items: center;
+.book {
+  width: 200px;
+}
+
+.boxbook{
+  height: 160px;
+  position: relative;
+  overflow: hidden;
+  right: 40px;
+  top: -80%;
+}
+
+.rover {
+  width: 300px;
+  transform: rotate(10deg);
+}
+
+.boxrover{
+  height: 160px;
+  position: relative;
+  overflow: hidden;
+  left: 2px;
+  top: -70%;
 }
 
 .p1 {
@@ -384,7 +430,7 @@ li {
 }
 
 .pline {
-  background-color: brown;
+  background-color: var(--color);
   margin-top: -3px;
   margin-left: 249px;
   width: 2px;
@@ -399,33 +445,30 @@ li {
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: brown transparent transparent transparent;
+  border-color: var(--color) transparent transparent transparent;
 }
 
-/* Tooltip container */
+
+/* -------------------------------------- PLANETS TOOLTIP */
 .tooltip {
   position: relative;
   display: inline-block;
 }
 
-/* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  background-color: brown;
+  background-color: var(--color);
   color: #fff;
   text-align: center;
   padding: 5px 0;
   border-radius: 10px;
-  border: 1px solid black;
-  box-shadow: 3px 3px 6px black;
-
-  /* Position the tooltip text - see examples below! */
+  box-shadow: 3px 3px 6px var(--background);
   position: absolute;
   z-index: 1;
   width: 120px;
-  bottom: calc(100% + 7px);
+  bottom: calc(100% + 10px);
   left: 50%;
-  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  margin-left: -60px;
 }
 
 .tooltip .tooltiptext::after {
@@ -436,10 +479,9 @@ li {
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: brown transparent transparent transparent;
+  border-color: var(--color) transparent transparent transparent;
 }
 
-/* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
@@ -450,49 +492,97 @@ li {
   transition: opacity ease-in 0.5s;
 }
 
+
+/* ----------------------------------------------- FOOTER */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--background);
+  width: 1000px;
+  height: auto;
+  margin: 50px 0;
+  font-size: 14px;
+  overflow-y: visible;
+  z-index: 1;
+}
+
+footer a:before{
+  content: '';
+  background: var(--color);
+  display: block;
+  position: relative;
+  bottom: 2px;
+  left: 0px;
+  width: 0;
+  height: 3px;
+  transition: all 0.1s ease-in-out;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 28px;
+  border: none;
+  outline: none;
+  background-color: var(--color);
+  color: var(--text);
+  cursor: pointer;
+  padding: 12px 10px;
+  border-radius: 25px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+
 /* JAYA_K Code ------------------------------------------------- */
 /*----------------***** section2 *****---------------------------*/
 .containerJAYA {
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-content: space-around;
-  max-width: 1100px;
-  min-height: 1000px;
-  margin: 0 auto;
   align-items: center;
-  background-color: rgb(16, 16, 16);
+  height: 800px;
+  padding: 40px;
+  margin: 0 auto;
+  background-image: url(https://media.giphy.com/media/XeH46jGNhcnaySNyd1/giphy-downsized-large.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-shadow: 3px 3px 2px black;
 }
 
 .img1JAYA {
   position: absolute;
-  top: 100px;
-  left: 100px;
+  top: 30%;
+  left: 50px;
   z-index: 1;
-  box-shadow: -60px -60px 30px rgb(201, 75, 75), 2px 2px 15px rgb(9, 9, 9);
+  box-shadow: 4px 4px 15px var(--background);
 }
 .img2JAYA {
   position: absolute;
-  left: 200px;
-  top: 300px;
-  box-shadow: 60px 60px 30px rgb(201, 75, 75);
+  left: 140px;
+  top: 40%;
+  box-shadow: 2px 2px 15px var(--background);
 }
 .infoJAYA {
-  padding: 0 50px;
-  text-align: center;
-  width: 30%;
-
-  color: aliceblue;
+  padding: 10px 0 10px 50px;
+  width: 54%;
+  color: var(--text);
 }
 /* -----------------**** section3 *****--------------------*/
 .containerJAYA2 {
   display: grid;
-  grid-template-rows: 100px 3fr 3fr 3fr;
+  grid-template-rows: 10px 3fr 3fr 3fr;
 
   grid-template-columns: 3fr 3fr 3fr;
 
-  background-color: rgb(16, 16, 16);
-  border: 1px solid rgb(218, 175, 137);
+  background-color: var(--background);
+  /* border: 1px solid rgb(4, 0, 255); */
   justify-content: center;
   margin-right: auto;
   margin-left: auto;
@@ -502,8 +592,8 @@ li {
 .itemJAYA2 {
   text-align: center;
   padding: 20px;
-  border-bottom: 1px solid rgb(204, 155, 112);
-  border-right: 1px solid rgb(204, 155, 112);
+  /* border-bottom: 1px solid rgb(204, 155, 112);
+  border-right: 1px solid rgb(204, 155, 112); */
   justify-content: center;
 }
 .item1JAYA2 {
@@ -513,33 +603,38 @@ li {
   font-weight: 800;
   font-size: 30px;
   padding-top: 10px;
-  border-bottom: 2px solid rgb(204, 155, 112);
+  /* border-bottom: 2px solid rgb(204, 155, 112); */
 }
 .numJAYA2 {
   /*border: 1px solid rgb(204, 155, 112);*/
-  border-radius: 50%;
-  background-color: brown;
+  border-radius: 25px;  /*ERIK CODE*/
+  background-color: var(--color);  /*ERIK CODE*/
+  font-weight: 700;
 }
 /*  ------------ ***** section4 *****-----------*/
 .sec4imgcontainer {
   display: flex;
   flex-wrap: wrap;
-  width: 1500px;
-  min-width: 400px;
-  gap: 20px 20px;
+  /* gap: 20px;
   margin: 0 auto;
-  justify-content: center;
+  padding: 20px; */
+  justify-content: space-evenly;
+  padding-bottom: 46px;
 }
 
 .sec4img-wrap {
   position: relative;
   width: 400px;
-  height: 400px;
+  height: 300px;
+  margin-top: 46px;
+  border-radius: 25px;  /*ERIK CODE*/
+  box-shadow: 6px 6px 20px black;
 }
 .sec4img-cls {
   display: block;
   width: 400px;
   height: 300px;
+  border-radius: 25px;  /*ERIK CODE*/
 }
 .sec4img-des {
   position: absolute;
@@ -548,15 +643,21 @@ li {
   opacity: 0;
 
   /* transition effect. not necessary */
-  transition: 0.5s, linear;
+  transition: 1s, linear;
+  transition: all ease-in-out 0.3s;  /*ERIK CODE*/
 }
 .sec4img-wrap:hover .sec4img-des {
   opacity: 1;
-  background-color: rgb(16, 16, 16);
+  border-radius: 25px;  /*ERIK CODE*/
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .sec4text {
-  color: white;
-  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  align-items: center;
+  justify-content: center;  /*ERIK CODE*/
+  color: var(--text);  /*ERIK CODE*/
   text-align: center;
   padding: 30px;
 }
