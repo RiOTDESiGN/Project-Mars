@@ -22,3 +22,25 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
+const redBtn = document.querySelector('#red');
+const blueBtn = document.querySelector('#blue');
+const greenBtn = document.querySelector('#green');
+const yellowBtn = document.querySelector('#yellow');
+
+redBtn.addEventListener('click', () => {
+  document.documentElement.style.setProperty('--color', 'rgb(165, 42, 42)');
+});
+
+blueBtn.addEventListener('click', () => {
+  document.documentElement.style.setProperty('--color', 'rgb(0, 124, 226)');
+});
+
+greenBtn.addEventListener('click', () => {
+  document.documentElement.style.setProperty('--color', 'rgb(48, 121, 0)');
+});
+
+yellowBtn.addEventListener('click', () => {
+  document.documentElement.style.setProperty('--color', 'rgb(209, 171, 0)');
+});
