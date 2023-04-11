@@ -343,48 +343,83 @@ li {
 }
 
 .p1 {
-  margin-top: 100px;
+  margin-top: 99px;
   margin-left: -7px;
   width: 10px;
   height: 10px;
-  border: 0;
   border-radius: 100%;
+  opacity: 0;
+  transition: all ease-in 0.2s;
+}
+.p1:hover {
+  background-color: rgb(255, 255, 255, 0.2);
+  border-style: inset;
+  border-color: rgb(255, 255, 255, 0.2);
+  opacity: 1;
 }
 
 .p2 {
-  margin-top: 92px;
+  margin-top: 90px;
   margin-left: 9px;
   width: 30px;
   height: 30px;
-  border: 0;
   border-radius: 100%;
+  opacity: 0;
+  transition: all ease-in 0.2s;
+}
+.p2:hover {
+  background-color: rgb(255, 255, 255, 0.2);
+  border-style: inset;
+  border-color: rgb(255, 255, 255, 0.2);
+  opacity: 1;
 }
 
 .p3 {
-  margin-top: 95px;
+  margin-top: 93px;
   margin-left: 45px;
   width: 24px;
   height: 24px;
-  border: 0;
   border-radius: 100%;
+  opacity: 0;
+  transition: all ease-in 0.2s;
+}
+.p3:hover {
+  background-color: rgb(255, 255, 255, 0.2);
+  border-style: inset;
+  border-color: rgb(255, 255, 255, 0.2);
+  opacity: 1;
 }
 
 .p4 {
-  margin-top: 82px;
+  margin-top: 79px;
   margin-left: 93px;
   width: 54px;
   height: 54px;
-  border: 0;
   border-radius: 100%;
+  opacity: 0;
+  transition: all ease-in 0.2s;
+}
+.p4:hover {
+  background-color: rgb(255, 255, 255, 0.2);
+  border-style: inset;
+  border-color: rgb(255, 255, 255, 0.2);
+  opacity: 1;
 }
 
 .p5 {
-  margin-top: 76px;
+  margin-top: 73px;
   margin-left: 168px;
   width: 70px;
   height: 70px;
-  border: 0;
   border-radius: 100%;
+  opacity: 0;
+  transition: all ease-in 0.2s;
+}
+.p5:hover {
+  background-color: rgb(255, 255, 255, 0.2);
+  border-style: inset;
+  border-color: rgb(255, 255, 255, 0.2);
+  opacity: 1;
 }
 
 .p6 {
@@ -392,44 +427,72 @@ li {
   margin-left: 243px;
   width: 14px;
   height: 14px;
-  border: 0;
   border-radius: 100%;
 }
 
 .p7 {
-  margin-top: 99px;
+  margin-top: 96px;
   margin-left: 262px;
   width: 26px;
   height: 26px;
-  border: 0;
   border-radius: 100%;
+  opacity: 0;
+  transition: all ease-in 0.2s;
+}
+.p7:hover {
+  background-color: rgb(255, 255, 255, 0.2);
+  border-style: inset;
+  border-color: rgb(255, 255, 255, 0.2);
+  opacity: 1;
 }
 
 .p8 {
-  margin-top: 98px;
+  margin-top: 95px;
   margin-left: 296px;
   width: 30px;
   height: 30px;
-  border: 0;
   border-radius: 100%;
+  opacity: 0;
+  transition: all ease-in 0.2s;
+}
+.p8:hover {
+  background-color: rgb(255, 255, 255, 0.2);
+  border-style: inset;
+  border-color: rgb(255, 255, 255, 0.2);
+  opacity: 1;
 }
 
 .p9 {
-  margin-top: 108px;
+  margin-top: 105px;
   margin-left: 332px;
   width: 10px;
   height: 10px;
   border: 0;
   border-radius: 100%;
+  opacity: 0;
+  transition: all ease-in 0.2s;
+}
+.p9:hover {
+  background-color: rgb(255, 255, 255, 0.2);
+  border-style: inset;
+  border-color: rgb(255, 255, 255, 0.2);
+  opacity: 1;
 }
 
 .p0 {
-  margin-top: 38px;
+  margin-top: 37px;
   margin-left: 355px;
   width: 150px;
   height: 150px;
-  border: 0;
   border-radius: 100%;
+  opacity: 0;
+  transition: all ease-in 0.2s;
+}
+.p0:hover {
+  background-color: rgb(255, 255, 255, 0.2);
+  border-style: inset;
+  border-color: rgb(255, 255, 255, 0.2);
+  opacity: 1;
 }
 
 .pline {
@@ -492,7 +555,7 @@ li {
 
 .tooltip .tooltiptext {
   opacity: 0;
-  transition: opacity ease-in 0.5s;
+  transition: all ease-in 0.3s;
 }
 
 
