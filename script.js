@@ -1,13 +1,14 @@
+// ---------------------------------------- RESET PAGE POSITION TO TOP ON RELOAD PAGE
 window.location.hash = '';//remove hash text
 window.location.href.replace('#', '');//remove hash
 history.replaceState(null, null, window.location.href);//replace state
 
 
-// Get the button
-let mybutton = document.getElementById("myBtn");
+// ----------------------------------------------------------------- GO TO TOP BUTTON
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+let mybutton = document.getElementById("myBtn"); // Get the button
+
+window.onscroll = function() {scrollFunction()}; // When the user scrolls down 20px from the top of the document, show the button
 
 function scrollFunction() {
   if (document.body.scrollTop > 620 || document.documentElement.scrollTop > 620) {
@@ -24,23 +25,19 @@ function topFunction() {
 }
 
 
+// --------------------------------------------------------------------- COLORCHANGER
 const redBtn = document.querySelector('#red');
 const blueBtn = document.querySelector('#blue');
 const greenBtn = document.querySelector('#green');
 const yellowBtn = document.querySelector('#yellow');
 
-redBtn.addEventListener('click', () => {
-  document.documentElement.style.setProperty('--color', 'rgb(165, 42, 42)');
-});
+function changeColor(color, text, background) {
+  document.documentElement.style.setProperty("--color", `rgb(${ color })`);
+  document.documentElement.style.setProperty("--text", `#${ text }`);
+  document.documentElement.style.setProperty("--bckgrnd", `url(${ background })`);
+}
 
-blueBtn.addEventListener('click', () => {
-  document.documentElement.style.setProperty('--color', 'rgb(0, 124, 226)');
-});
-
-greenBtn.addEventListener('click', () => {
-  document.documentElement.style.setProperty('--color', 'rgb(48, 121, 0)');
-});
-
-yellowBtn.addEventListener('click', () => {
-  document.documentElement.style.setProperty('--color', 'rgb(209, 171, 0)');
-});
+redBtn.addEventListener("click", () => changeColor("165, 42, 42", "ffffff", "https://media.giphy.com/media/WPwD0gdWFsNRy8LA2P/giphy-downsized-large.gif"));
+blueBtn.addEventListener("click", () => changeColor("0, 124, 226", "ffffff", "https://media.giphy.com/media/Wy3Q0fuNIJmYn62Lcv/giphy-downsized-large.gif"));
+greenBtn.addEventListener("click", () => changeColor("48, 121, 0", "ffffff", "https://media.giphy.com/media/EIbqAlY9yJlJ3WBHjc/giphy-downsized-large.gif"));
+yellowBtn.addEventListener("click", () => changeColor("209, 171, 0", "ffffff", "https://media.giphy.com/media/UNHplVba2fweBfkLHv/giphy-downsized-large.gif"));
