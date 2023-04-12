@@ -599,20 +599,45 @@ footer a:before{
   height: 20px;
   border-radius: 25px;
   padding: 10px 11px;
-  border: 0;
 }
 
 .redbtn {
   background-color: rgb(111, 28, 32);
+  border: 2px solid rgb(111, 28, 32);
 }
 .bluebtn {
   background-color: rgb(55, 84, 133);
+  border: 2px solid rgb(55, 84, 133);
 }
 .greenbtn {
   background-color: rgb(68, 124, 73);
+  border: 2px solid rgb(68, 124, 73);
 }
 .yellowbtn {
   background-color: rgb(122, 73, 25);
+  border: 2px solid rgb(122, 73, 25);
+}
+.btn:hover {
+  border: 2px solid rgb(255, 255, 255, 0.2);
+}
+.btn:after {
+  content: "";
+  background: #ffffff;
+  display: block;
+  position: absolute;
+  padding-top: 30px;
+  padding-left: 30px;
+  margin-left: -15px;
+  margin-top: -15px;
+  border-radius: 25px;
+  opacity: 0;
+  transition: all 0.4s
+}
+.btn:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
 }
 
 #myBtn {
