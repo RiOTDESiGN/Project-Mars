@@ -660,8 +660,8 @@ footer a:before{
 .img1JAYA {
   position: absolute;
   border-radius: 25px;
-  top: 2%;
-  left: 2%;
+  top: 4%;
+  left: 3%;
   z-index: 1;
   box-shadow: 4px 4px 15px var(--background);
   transform: rotate(-10deg) scale(0.85);
@@ -673,7 +673,7 @@ footer a:before{
   right: 2%;
   bottom: 2%;
   box-shadow: 2px 2px 15px var(--background);
-  transform: rotate(3deg) scale(0.9);
+  transform: rotate(3deg) scale(0.85);
   z-index: 65;
 }
 .infoJAYA {
@@ -685,7 +685,30 @@ footer a:before{
   z-index: 60;
 }
 .infoJAYA p {
-  text-align: left;
+  text-align: justify;
+}
+
+.infoJAYA::before {
+  content: "";
+  padding: 80px 80px;
+  float: left;
+  shape-outside: polygon(54% 0, 90% 0, 99% 27%, 100% 38%, 91% 50%, 0% 70%, 0 0);
+}
+
+.infoJAYAspace {
+  content: "";
+  padding: 60px 70px;
+  float: right;
+  shape-outside: polygon(26% 17%, 100% 24%, 100% 100%, 0 100%, 8% 34%, 14% 22%);
+}
+
+
+.infoJAYA:: {
+  content: "";
+  padding: 80px;
+  background-color: #000;
+  border: 1px solid blue;
+  float: right;
 }
 
 /* -----------------**** section3 *****--------------------*/
