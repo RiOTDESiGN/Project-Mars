@@ -37,7 +37,7 @@ function changeColor(color, text, background) {
   document.documentElement.style.setProperty("--bckgrnd", `url(${ background })`);
 }
 
-redBtn.addEventListener("click", () => changeColor("165, 42, 42", "ffffff", "https://media.giphy.com/media/WPwD0gdWFsNRy8LA2P/giphy-downsized-large.gif"));
-blueBtn.addEventListener("click", () => changeColor("0, 124, 226", "ffffff", "https://media.giphy.com/media/Wy3Q0fuNIJmYn62Lcv/giphy-downsized-large.gif"));
-greenBtn.addEventListener("click", () => changeColor("48, 121, 0", "ffffff", "https://media.giphy.com/media/EIbqAlY9yJlJ3WBHjc/giphy-downsized-large.gif"));
-yellowBtn.addEventListener("click", () => changeColor("209, 171, 0", "ffffff", "https://media.giphy.com/media/UNHplVba2fweBfkLHv/giphy-downsized-large.gif"));
+redBtn.addEventListener("click", () => changeColor("111, 28, 32", "ffffff", "https://media.giphy.com/media/WPwD0gdWFsNRy8LA2P/giphy-downsized-large.gif"));
+blueBtn.addEventListener("click", () => changeColor("55, 84, 133", "ffffff", "https://media.giphy.com/media/Wy3Q0fuNIJmYn62Lcv/giphy-downsized-large.gif"));
+greenBtn.addEventListener("click", () => changeColor("68, 124, 73", "ffffff", "https://media.giphy.com/media/EIbqAlY9yJlJ3WBHjc/giphy-downsized-large.gif"));
+yellowBtn.addEventListener("click", () => changeColor("122, 73, 25", "ffffff", "https://media.giphy.com/media/UNHplVba2fweBfkLHv/giphy-downsized-large.gif"));

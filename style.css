@@ -1,7 +1,7 @@
 /* ---------------------------------------- ROOT ELEMENTS */
 :root {
   --text: #fff;
-  --color: rgb(165, 42, 42);
+  --color: rgb(111, 28, 32);
   --background: #000;
   --bckgrnd: url(https://media.giphy.com/media/WPwD0gdWFsNRy8LA2P/giphy-downsized-large.gif);
 }
@@ -173,7 +173,11 @@ li {
   border-radius: 50px;
   border: 10px double var(--background);
   padding: 0 40px;
-  text-shadow: 2px 2px 2px  #000000, -2px -2px 2px  #000000, 2px -2px 2px  #000000, -2px 2px 2px  #000000;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
 }
 
 .item-4 {
@@ -599,16 +603,16 @@ footer a:before{
 }
 
 .redbtn {
-  background-color: rgb(165, 42, 42);
+  background-color: rgb(111, 28, 32);
 }
 .bluebtn {
-  background-color: rgb(0, 124, 226);
+  background-color: rgb(55, 84, 133);
 }
 .greenbtn {
-  background-color: rgb(48, 121, 0);
+  background-color: rgb(68, 124, 73);
 }
 .yellowbtn {
-  background-color: rgb(209, 171, 0);
+  background-color: rgb(122, 73, 25);
 }
 
 #myBtn {
