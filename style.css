@@ -899,7 +899,7 @@ footer a:before{
   height: 1em;
   margin-top: -0.5em;
   margin-left: -0.5em;
-  background-image: url(deimos.webp);
+  background-image: url(phobos.webp);
   background-size: cover;
   
   -webkit-animation-name: invert-orbit;
@@ -940,7 +940,7 @@ footer a:before{
 }
 @keyframes invert-orbit {
     0% {
-        transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg) scale(1);
+        transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg) scale(0.6);
     }
 
     25% {
@@ -948,11 +948,11 @@ footer a:before{
     }
 
     26% {
-      opacity: 0.5;
+      opacity: 0.25;
     }
 
     38% {
-      opacity: 0.5;
+      opacity: 0.25;
     }
 
     39% {
@@ -970,6 +970,6 @@ footer a:before{
     }
 
     100% {
-        transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg) scale(1);
+        transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg) scale(0.6);
     }
 }
