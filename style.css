@@ -635,7 +635,7 @@ footer a:before{
   opacity: 0;
   transition: all 0.6s
 }
-.btn:active:after {
+.btn:active::after {
   box-shadow: 0 0 0 0 rgb(66, 66, 66);
   padding: 0;
   margin: 0;
@@ -734,7 +734,6 @@ footer a:before{
   shape-outside: polygon(26% 17%, 100% 24%, 100% 100%, 0 100%, 8% 34%, 14% 22%);
 }
 
-
 .infoJAYA:: {
   content: "";
   padding: 80px;
@@ -832,7 +831,7 @@ footer a:before{
 }
 
 
-
+/* ----------------------------------------------- ORBITING MOON */
 #orbit-system {
   position: relative;
   width: 18em;
@@ -930,46 +929,72 @@ footer a:before{
 }
 
 @-webkit-keyframes invert-orbit {
-    0% {
-        transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg);
-    }
+  0% {
+      transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg) scale(0.6);
+  }
 
-    100% {
-        transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg);        
-    }
+  25% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0.25;
+  }
+
+  38% {
+    opacity: 0.25;
+  }
+
+  39% {
+      transform: rotateZ(220deg) rotateY(30deg) rotateX(-75deg) scale(0);
+      opacity: 0;
+  }
+
+  55% {
+    opacity: 0;
+  }
+
+  56% {
+      transform: rotateZ(170deg) rotateY(30deg) rotateX(-75deg) scale(0);
+      opacity: 1;
+  }
+
+  100% {
+      transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg) scale(0.6);
+  }
 }
 @keyframes invert-orbit {
-    0% {
-        transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg) scale(0.6);
-    }
+  0% {
+      transform: rotateZ(360deg) rotateY(30deg) rotateX(-75deg) scale(0.6);
+  }
 
-    25% {
-      opacity: 1;
-    }
+  25% {
+    opacity: 1;
+  }
 
-    26% {
-      opacity: 0.25;
-    }
+  26% {
+    opacity: 0.25;
+  }
 
-    38% {
-      opacity: 0.25;
-    }
+  38% {
+    opacity: 0.25;
+  }
 
-    39% {
-        transform: rotateZ(220deg) rotateY(30deg) rotateX(-75deg) scale(0);
-        opacity: 0;
-    }
-
-    55% {
+  39% {
+      transform: rotateZ(220deg) rotateY(30deg) rotateX(-75deg) scale(0);
       opacity: 0;
-    }
+  }
 
-    56% {
-        transform: rotateZ(170deg) rotateY(30deg) rotateX(-75deg) scale(0);
-        opacity: 1;
-    }
+  55% {
+    opacity: 0;
+  }
 
-    100% {
-        transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg) scale(0.6);
-    }
+  56% {
+      transform: rotateZ(170deg) rotateY(30deg) rotateX(-75deg) scale(0);
+      opacity: 1;
+  }
+
+  100% {
+      transform: rotateZ(0deg) rotateY(30deg) rotateX(-75deg) scale(0.6);
+  }
 }
